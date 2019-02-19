@@ -13,8 +13,8 @@ import (
 )
 
 var opts struct {
-	LogLevel string `long:"log-level" description:"Log level" default:"info"`
-	BindAddr string `long:"bind-address" description:"address for binding checks to" default:":8080"`
+	LogLevel string `long:"log-level" env:"LOG_LEVEL" description:"Log level" default:"info"`
+	BindAddr string `long:"bind-address" env:"BIND_ADDRESS" description:"address for binding checks to" default:":8080"`
 
 	ReadyDelay time.Duration `long:"ready-delay" env:"READY_DELAY" description:"Duration to wait before becoming ready"`
 }
